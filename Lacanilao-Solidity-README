@@ -42,10 +42,10 @@ contract myToken {
 
 * To compile the code, simple go to the left side and click "Solidity Compiler" tab. Make sure that you have to set the compatible compiler for your program. (e.g., 0.8.18).
 * Once the code has been compiled, deploy the contract by clicking the "Deploy and Run Transactions" tab in the left sidebar.
-* Once the contract has been deployed, you can interact with it by calling tokenName and tokenAbbrv.
+* Once the contract has been deployed, you can interact with it by calling tokenName and tokenAbbrv together with totalSupply and balances.
 * on the account section, there's a alpha numeric numbers there that must be copied to the clipboard. once copied, you can paste it at the burn and mint sections.
 * you can enter a value of each sections.
-* once done, click the balances for the result.
+* once done, click the balances and totalSupply for the result.
 
 ## Authors
 
