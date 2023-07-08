@@ -1,0 +1,58 @@
+# Creating a Token
+
+The Solidity Program "Creating a Token" is a demonstration of syntax and functionality of Solidity Programming Language. The purpose of this program is to serve a starting point and have an idea on how the coins or how the tokens works in a blockchain. This will serve as an inspiration for the future projects that us students may encounter.
+
+## Description
+
+This program has been created using a single contract called "myToken". This program was written in a Solidity Programming Language. 
+The contract has a function that may count or to see balances of coins or token. This program serves as a starting guide for the future projects that may we encounter in solidity. 
+
+## Getting Started
+
+
+### Executing program
+
+To run the program, we must create it in the remix IDE provided by Etherium. And then, we must also know what compatible compiler should we use. 
+* first, create a file.
+  - Once you are on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., HelloWorld.sol). Copy and paste the following code into the file:
+
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.18;
+
+contract myToken {
+    string public tokenName = "ARCADE";
+    string public tokenAbbrv = "ARC";
+    uint totalSupply = 0;
+
+    mapping(address => uint) public balances;
+
+    function mint (address _address, uint _value) public {
+        totalSupply += _value;
+        balances[_address] += _value;
+    }
+    
+    function burn (address _address, uint _value) public {
+        if(balances[_address] >= _value) {
+            totalSupply -= _value;
+            balances[_address] -= _value;
+        }
+    }
+
+}
+
+* To compile the code, simple go to the left side and click "Solidity Compiler" tab. Make sure that you have to set the compatible compiler for your program. (e.g., 0.8.18).
+* Once the code has been compiled, deploy the contract by clicking the "Deploy and Run Transactions" tab in the left sidebar.
+* Once the contract has been deployed, you can interact with it by calling tokenName and tokenAbbrv.
+* on the account section, there's a alpha numeric numbers there that must be copied to the clipboard. once copied, you can paste it at the burn and mint sections.
+* you can enter a value of each sections.
+* once done, click the balances for the result.
+
+## Authors
+
+Jay Lacanilao
+8210409@ntc.edu.ph
+
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details
